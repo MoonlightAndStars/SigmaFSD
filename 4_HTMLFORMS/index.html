@@ -18,7 +18,7 @@
         data from the client side to the server side. Forms in HTML are created
         by "&lt;form&gt;&lt;/form&gt;" tag
       </p>
-      <h3>Form Input Types</h3>
+      <h2>Form Input Types</h2>
       <ol>
         <li>text</li>
         <li>radio</li>
@@ -132,6 +132,17 @@
             <label for="color-picker">Pick Color from here : </label>
             <input type="color" id="color-picker" name="color" />
           </section>
+          <section class="select">
+            <label for="favorite-book">Select your favorite book </label>
+            <select name="books" id="favorite-book">
+              <option value="Select Here">Select Here</option>
+              <option value="Ikigai">Ikigai</option>
+              <option value="Atomic Habits">Atomic Habits</option>
+              <option value="Think And Grow Rich">Think and grow rich</option>
+              <option value="Rich Dad Poor Dad">Rich Dad Poor Dad</option>
+              <option value="Deep Work">Deep Work</option>
+            </select>
+          </section>
         </fieldset>
         <fieldset>
           <legend>Account Security</legend>
@@ -178,8 +189,11 @@
               title="Enter your number with proper country code"
               minlength="10"
               maxlength="15"
-            pattern="^\+\d{1,3}\s?\d{6,14}$"
-            <!-- abc -->
+              pattern="^\+\d{1,3}\s?\d{6,14}$"
+              <!--
+              abc
+              --
+            />
             <!--^Start of the string (ensures the match begins from the start). -->
             <!-- \+ → The plus sign (+) is mandatory for international dialing codes (escaped as \+ because + is a special regex character). -->
             <!-- \d{1,3} → Matches 1 to 3 digits (country code, e.g., +1, +91, +971). -->
