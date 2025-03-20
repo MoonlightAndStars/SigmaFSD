@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="This page contains information about HTML forms"
+    />
+    <title>HTML Forms !</title>
+  </head>
+  <body>
+    <section class="main">
+      <h1>HTML FORMS</h1>
+      <p>
+        Forms in HTML are a method of getting user data through user input and
+        use the obtained data to process the desired operation by submitting the
+        data from the client side to the server side. Forms in HTML are created
+        by "&lt;form&gt;&lt;/form&gt;" tag
+      </p>
+      <h3>Form Input Types</h3>
+      <ol>
+        <li>text</li>
+        <li>radio</li>
+        <li>checkbox</li>
+        <li>textarea</li>
+        <li>submit</li>
+        <li>password</li>
+        <li>email</li>
+        <li>tel</li>
+        <li>number</li>
+        <li>color</li>
+      </ol>
+      <h3>Form Examples</h3>
+      <form action="/">
+        <fieldset>
+          <legend>Basic Details</legend>
+          <section class="text-type">
+            <h4>Input Type "text" Example</h4>
+            <label for="username">Enter Username : </label>
+            <input
+              type="text"
+              id="username"
+              name="uname"
+              placeholder="Enter Username"
+            />
+          </section>
+          <section class="radio-type">
+            <h4>Input Type "radio" Example</h4>
+            <p>Radio Tag</p>
+            <ol>
+              <li>
+                Radio inputs require a &lt;label&gt; to make them more
+                accessible. If they are not linked to a label, clicking on the
+                text will not select the radio button.
+              </li>
+              <li>input type radio creates radio boxes</li>
+              <li>
+                these radio boxes/buttons are clickable only one at a time and
+                we cannot multi-select radio buttons
+              </li>
+              <li>
+                here in the below example there are two radio buttons one for
+                male and another for female and both are linked to their
+                respective labels through IDs.
+              </li>
+              <li>
+                The name attribute identifies the input field when the form is
+                submitted. The server uses this name to retrieve the value
+                entered by the user. All input fields with the same name are
+                treated as a group, allowing only one selection at a time.
+              </li>
+              <li>
+                here in this example the name is set to gender for both the
+                input fields.
+              </li>
+              <li>
+                the value field defines the actual data or value that will be
+                sent to the server if the input is selected or filled.
+              </li>
+              <li>
+                for checkboxes and input buttons the value is sent only if the
+                input is checked.
+              </li>
+            </ol>
+
+            <input
+              type="radio"
+              id="radio-button-female"
+              name="gender"
+              value="female"
+            />
+            <label for="radio-button-female">Female</label>
+
+            <input
+              type="radio"
+              id="radio-button-male"
+              name="gender"
+              value="male"
+            />
+            <label for="radio-button-male">Male</label>
+          </section>
+          <section class="checkbox-type">
+            <h4>Input Type "checkbox" Example</h4>
+            <p>we use checkboxes when we have to take more than one input</p>
+            <input
+              type="checkbox"
+              name="subscription"
+              id="checkbox-subscription"
+              value="yes"
+            />
+            <label for="checkbox-subscription">Subscribe to NewsLetter</label>
+            <input
+              type="checkbox"
+              name="subscription-status"
+              value="no"
+              id="current-subscriber"
+            />
+            <label for="current-subscriber"
+              >Are you a subscriber of our channel ?</label
+            >
+          </section>
+          <section class="number-type">
+            <h4>Input Type "number" Example</h4>
+            <p>Number Example</p>
+            <label for="number-input">Enter Number : </label>
+            <input type="number" name="unum" id="number-input" />
+          </section>
+          <section class="color-type">
+            <h4>Input Type "color" Example</h4>
+            <p>Color Picker</p>
+            <label for="color-picker">Pick Color from here : </label>
+            <input type="color" id="color-picker" name="color" />
+          </section>
+        </fieldset>
+        <fieldset>
+          <legend>Account Security</legend>
+          <section class="password-type">
+            <h4>Input Type "password" Example</h4>
+            <p>
+              In an input type="password", the entered password is masked on the
+              screen. To secure password data, forms should use the POST method
+              instead of GET to prevent exposure in the URL. Additionally,
+              hashing mechanisms in JavaScript or backend security measures
+              should be used before storing passwords.
+            </p>
+            <p>
+              <strong
+                >We can use attribute like minlength and maxlength in input to
+                tell the browser the length of the value expected in the
+                field.</strong
+              >
+            </p>
+            <label for="password-user">Password</label>
+            <input
+              type="password"
+              id="password-user"
+              name="upassword"
+              minlength="8"
+              maxlength="12"
+              required
+            />
+          </section>
+          <section class="email-type">
+            <h4>Input Type "email" Example</h4>
+            <label for="useremail">Email : </label>
+            <input type="email" id="useremail" name="uemail" required />
+          </section>
+          <section class="tel-type">
+            <h4>Input Type "tel" Example</h4>
+            <p>Telephone Number</p>
+            <label for="telephone-number">Telephone Number : </label>
+            <input
+              type="tel"
+              id="telephone-number"
+              required
+              placeholder="+91xxxxxxxxxx"
+              title="Enter your number with proper country code"
+              minlength="10"
+              maxlength="15"
+            pattern="^\+\d{1,3}\s?\d{6,14}$"
+            <!-- abc -->
+            <!--^Start of the string (ensures the match begins from the start). -->
+            <!-- \+ → The plus sign (+) is mandatory for international dialing codes (escaped as \+ because + is a special regex character). -->
+            <!-- \d{1,3} → Matches 1 to 3 digits (country code, e.g., +1, +91, +971). -->
+            <!-- \s? → Matches zero or one whitespace (\s?) (allows both +91 9876543210 and +919876543210). -->
+            <!-- \d{6,14} → Matches 6 to 14 digits (actual phone number). -->
+            <!-- $ → End of the string (ensures no extra characters are allowed at the end). -->
+            />
+          </section>
+        </fieldset>
+        <fieldset>
+          <legend>Feedback Area</legend>
+          <section class="textarea-type">
+            <h4>Input Type "textarea" Example</h4>
+            <p>to use textarea we use the &lt;textarea&gt; tag</p>
+            <textarea
+              name="feedback"
+              id="feedback"
+              rows="5"
+              cols="50"
+              placeholder="Type your feedback here"
+            ></textarea>
+            <label for="feedback"></label>
+          </section>
+          <section class="submit-type">
+            Your Feedback :
+            <h4>Input Type "submit" Example</h4>
+            <p>
+              <strong>Buttons</strong> can be created by input tag as well as
+              the button tag but it is good to create button with the button
+              tag.
+            </p>
+            <label for="submit-button">To Submit form :- </label>
+            <input type="submit" value="Click Me" id="submit-button" />
+          </section>
+        </fieldset>
+      </form>
+      <fieldset>
+        <legend>
+          This is a fieldset, the lines and the box and the text written is a
+          legend.
+        </legend>
+        <p>
+          Fieldsets are used to segregate information in the form based on the
+          information type.
+        </p>
+        <p>
+          legend is used to mark the type of the detail the user is filling for
+          the convenience of the user.
+        </p>
+      </fieldset>
+    </section>
+  </body>
+</html>
