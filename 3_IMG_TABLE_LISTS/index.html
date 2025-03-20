@@ -1,0 +1,165 @@
+<!-- HTML IMG, TABLE AND LIST -->
+<!-- 1. <img> tag with 'src' and 'alt' essential attributes
+2. <table> has tags like <caption> , <thead> , <tbody> , <tfoot> , <th> , <td> , <tr> etc inside it
+3. <td> has attributes like "rowspan" , "colspan" etc
+4.Lists: Unordered list <ul>  (uses 'type' attribute and <li> tag)
+              Ordered list <ol>  (uses 'type' attribute and <li> tag)
+              Definition list <dl> (uses <dt> , <dd> etc tags) -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML IMAGE, TABLE AND LISTS</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <section class="main">
+      <h1>HTML IMAGE TAG, TABLE TAG AND LIST TAG !</h1>
+      <section class="image">
+        <h2>HTML Images</h2>
+        <p>
+          To include images on any webpage we must use the
+          <strong>img</strong> tag with attribute src and alt. src attribute is
+          mandatory and alt attribute is better for SEO practices.
+        </p>
+        <img
+          src="./brave_screenshot_static.toiimg.com.png"
+          alt="allahabad-duronto-trainboard"
+          height="130"
+        />
+        <p>
+          We can set either height or width in img attribute for SEO purposes.
+          It is by default in pixel and we do not need to write px or pixel
+          after giving value.
+        </p>
+      </section>
+      <section class="table">
+        <h2>HTML Tables</h2>
+        <p>
+          We have a table tag which is used to create a table and inside table
+          tag we have a tr tag and a td tag. We have th as table heading and it
+          is used in first tr and then in the remaining trs we write td where td
+          stands for table data
+        </p>
+        <h3>Rowspan and Colspan</h3>
+        <p>
+          It is used to define the number of columns or rows to be spanned by a
+          data.
+        </p>
+        <table>
+          <caption>
+            <em
+              >This is an Example table and this caption is created by caption
+              tag</em
+            >
+          </caption>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Designation</th>
+              <th>Language</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Sam</td>
+              <td>Software Developer</td>
+              <td>JavaScript</td>
+            </tr>
+            <tr>
+              <td colspan="2">Nick</td>
+              <td>Java</td>
+            </tr>
+            <tr>
+              <td>Jane</td>
+              <td rowspan="2">WebDev</td>
+              <td rowspan="2">Python</td>
+            </tr>
+            <tr>
+              <td>Sam</td>
+            </tr>
+          </tbody>
+
+          <tfoot>
+            <tr>
+              <td colspan="3"><em>This is footer.</em></td>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
+      <section class="list">
+        <p>
+          They are very important in HTML. There are three types of lists in
+          HTML.
+        </p>
+        <ol>
+          <li>Ordered List</li>
+          <li>Unordered List</li>
+          <li>
+            Definition List - less likely to be used but important to know.
+          </li>
+        </ol>
+        <p>
+          The <strong>Ordered List</strong> and
+          <strong>Unordered List</strong> are mostly used and are very
+          important.
+        </p>
+        <h3>Ordered List</h3>
+        <p>
+          An ordered list is created by ol tag and has different list styles.
+          The list items are created by using the li tag. There are different
+          ways to arrange an ordered list. By default they are numbered but they
+          can be converted to roman numbers, small-cap roman, small cap
+          alphabets.
+        </p>
+        <ol>
+          <li>By default the list type is numbered.</li>
+          <li type="i">if we use type="i" attribute then the list will be numbered in small roman numbers</li>
+          <li type="I">if we use type="I" attribute then the list will be numbered in caps roman numbers</li>
+          <li type="a">if we use type="a" attribute then the list will be numbered in small cap aplhabets starting from a</li>
+          <li>if we use type="A" attribute then the list will be numbered in large cap alphabets.</li>
+          <li>we can also set a start position of our list in order to make our list start from a particular number or letter instead of default starting points. in the main ol tag we need to give start attribute with the start location</li>
+        </ol>
+
+        <h3>Unordered List</h3>
+        <p>
+          An unordered list is created by using ul tag and has list styles are
+          circle, square, none, etc.The list items are created by using the li
+          tag.
+        </p>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JAVASCRIPT</li>
+        </ul>
+        <h3>Definition List</h3>
+        <p>A definition list is created by the dl tag and in dl tag there is dt and dd where dt stands for definition term and dd stands for definition </p>
+        <dl>
+          <dt>HTML</dt>
+          <dd>
+            HyperText Markup Language : The standard language for creating web
+            pages
+          </dd>
+        </dl>
+
+        <dl>
+          <dt>CSS</dt>
+          <dd>
+            Cascading Style Sheets : A stylesheet language used for describing
+            the look and formatting of a document written in HTML.
+          </dd>
+        </dl>
+
+        <dl>
+          <dt>JAVASCRIPT</dt>
+          <dd>
+            A programming language commonly used in web development to add
+            interactive features.
+          </dd>
+        </dl>
+      </section>
+    </section>
+  </body>
+</html>
