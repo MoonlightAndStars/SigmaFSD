@@ -1,0 +1,39 @@
+<!-- without using br tag, write a vertically aligned form asking for name, city and pin code of the user. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz 1</title>
+  </head>
+  <body>
+    <h1>Personal Details Form</h1>
+    <form action="/" method="post">
+      <fieldset>
+        <legend>Personal Details</legend>
+        <section class="name">
+          <label for="name">Name : </label>
+          <p><input type="text" id="name" name="name" required /></p>
+        </section>
+        <section class="city">
+          <label for="city">City : </label>
+          <p><input type="text" id="city" name="city" required /></p>
+        </section>
+        <section class="pincode">
+          <label for="pincode">Pincode : </label>
+          <!-- minlength and maxlength work better with input type text or password and they do not function as expected in case of input type number -->
+          <p>
+            <input
+              type="number"
+              pattern="[0-9]{6}"
+              id="pincode"
+              name="pincode"
+              required
+            />
+          </p>
+        </section>
+      </fieldset>
+    </form>
+  </body>
+</html>

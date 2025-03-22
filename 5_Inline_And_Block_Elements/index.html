@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inline Elements vs Block Elements</title>
+    <style>
+        /* internal styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background: linear-gradient(
+          to right,
+          rgb(238, 150, 150),
+          rgba(248, 248, 81, 0.822),
+          rgb(247, 203, 210)
+        );
+        font-style: italic;
+      }
+      /* for the main heading - h1  */
+      h1 {
+        font-size: 2em;
+        color: white;
+        text-shadow: 5px 3px 4px rgba(255, 255, 252, 0.822);
+        text-align: center;
+        padding: 20px;
+        margin-bottom: 20px;
+        background-color: black;
+        border: 2px groove gray;
+      }
+      /* hover effect for transition */
+      h1:hover {
+        background-color: rgba(149, 245, 245, 0.329);
+        transition: all;
+        transition: background-color 0.3s ease, color 1.7s ease;
+        border-radius: 10px;
+        color: rgb(12, 0, 0);
+        text-decoration: underline;
+        font-style: normal;
+        text-shadow: 5px 3px 4px rgba(19, 18, 18, 0.822);
+      }
+
+      /* for both the h2 on page - inline and block */
+      h2 {
+        text-align: center;
+        text-decoration: underline;
+        padding-top: 10px;
+        padding-bottom: 5px;
+      }
+
+      /* for the paragraphs on page */
+      p {
+        margin: 5px;
+        line-height: 1.2;
+      }
+
+      /* for the examples written in h3 */
+      h3 {
+        margin-left: 5px;
+      }
+
+      /* setting the max width and giving border margin and padding */
+      .inline,
+      .block {
+        max-width: 800px;
+        border: 2px solid;
+        margin: 10px auto; /* 10px from top and bottom and auto from left and right. this centers the div */
+        padding: 10px;
+      }
+
+      ol {
+        padding-left: 20px;
+      }
+
+      .example {
+        max-width: 500px;
+        border: 2px solid;
+        margin: 5px auto;
+        padding: 5px;
+      }
+
+      a {
+        background-color: aliceblue;
+        text-decoration: none;
+      }
+/* using child selector to target the p inside the example section only */
+      .example > p {
+        background-color: red;
+        color: beige;
+      }
+
+      .example > div {
+        background-color: yellow;
+        color: rgb(196, 4, 255);
+      }
+
+      .example > span {
+        background-color: cadetblue;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="main">
+      <h1>Inline Elements VS Block Elements</h1>
+      <!-- this section is about inline elements -->
+      <section class="inline">
+        <h2>Inline Element</h2>
+        <p>
+          The elements that occupy width that is equal to the content. They do
+          not occupy the whole width and only occupy the width that is required
+          by the content to fill inside.
+        </p>
+        <h3>Examples of Inline Elements</h3>
+        <p>Most commonly used first.</p>
+        <ol>
+          <li>&lt;a&gt; - anchor or hyperlinks</li>
+          <li>&lt;img&gt; - image.</li>
+          <li>&lt;span&gt; - generic inline container.</li>
+          <li>&lt;input&gt; - input field.</li>
+          <li>&lt;label&gt; - label for a form element.</li>
+          <li>&lt;strong&gt; - strong emphasis.</li>
+          <li>&lt;em&gt; - emphasized text.</li>
+          <li>&lt;br&gt; - line break.</li>
+          <li>&lt;code&gt; - code snippet.</li>
+          <li>&lt;b&gt; - bold text.</li>
+          <li>&lt;i&gt; - italic text.</li>
+          <li>&lt;u&gt; - underlined text.</li>
+          <li>&lt;small&gt; - smaller text.</li>
+          <li>&lt;sub&gt; - subscript.</li>
+          <li>&lt;sup&gt; - superscript.</li>
+          <li>&lt;mark&gt; - marked or highlighted text.</li>
+          <li>&lt;q&gt; - short-inline quotation.</li>
+          <li>&lt;cite&gt; - citation.</li>
+          <li>&lt;kbd&gt; - keyboard input.</li>
+          <li>&lt;samp&gt; - sample output.</li>
+          <li>
+            &lt;var&gt; - variable in a mathematical expression or programming
+            context.
+          </li>
+          <li>&lt;time&gt; - time.</li>
+          <li>&lt;abbr&gt; - abbreviation.</li>
+          <li>&lt;data&gt; - machine readable translation of context.</li>
+          <li>&lt;acronym&gt; - acronyms (not supported in HTML 5).</li>
+        </ol>
+      </section>
+      <!-- this section is about block elements. -->
+      <section class="block">
+        <h2>Block Element</h2>
+        <p>The block elements occupy width that is of the viewport.</p>
+        <p>
+          <strong>Note : </strong>By changing the display property through CSS
+          we can change the elements to inline from block or to block from
+          inline.
+        </p>
+        <h3>Examples of Block Level Elements</h3>
+        <p>Most commonly used first</p>
+        <ol>
+          <li>&lt;div&gt; : a generic container for flow content.</li>
+          <li>&lt;p&gt; : paragraph.</li>
+          <li>
+            &lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;,
+            &lt;h6&gt; - headings.
+          </li>
+          <li>
+            &lt;ul&gt;, &lt;ol&gt;, &lt;li&gt; - unordered list, ordered list
+            and list items.
+          </li>
+          <li>&lt;form&gt; - a section containing form controls.</li>
+          <li>&lt;table&gt; - table.</li>
+          <li>
+            &lt;section&gt; - a standalone section of a document(semantic).
+          </li>
+          <li>
+            &lt;header&gt; - a container for introductory content or a set of
+            navigational links.
+          </li>
+          <li>&lt;footer&gt; - footer of a section or a page.</li>
+          <li>
+            &lt;nav&gt; - a section of a page that contains navigational links.
+          </li>
+          <li>&lt;article&gt; - a self-contained composition in a document.</li>
+          <li>
+            &lt;aside&gt; - a section of a page that contains information
+            indirectly related to the main.
+          </li>
+          <li>&lt;main&gt; - the main content of the document.</li>
+          <li>
+            &lt;fieldset&gt; - a set of form controls grouped under a common
+            name.
+          </li>
+          <li>
+            &lt;blockquote&gt; - a block of quote that is a quotation from
+            another source.
+          </li>
+          <li>&lt;pre&gt; - pre-formatted text.</li>
+          <li>
+            &lt;canvas&gt; - a container used to draw graphics via javascript.
+          </li>
+          <li>&lt;dl&gt; - definition list/description list.</li>
+          <li>&lt;dt&gt; - term in a definition/description list.</li>
+          <li>
+            &lt;dd&gt; - definition/description in a definition/description
+            list.
+          </li>
+          <li>
+            &lt;figure&gt; - any content that is referenced from the main
+            content.
+          </li>
+          <li>&lt;figcaption&gt; - a caption for a &lt;figure&gt; element.</li>
+          <li>
+            &lt;address&gt; - contact information for the author or owner of the
+            document.
+          </li>
+          <li>&lt;hr&gt; - a thematic break or a horizontal rule.</li>
+          <li>&lt;tfoot&gt; - footer of a table.</li>
+        </ol>
+      </section>
+      <!-- this section is about examples -->
+      <section class="example">
+        <h2>Visual Example of Inline and Block</h2>
+        <p>This is a paragraph and a paragraph is a block level element.</p>
+        <a href="https://google.com"
+          >Google Website :- written in anchor tag and anchor tag is an inline
+          element.</a
+        >
+        <div>This is a div, it is a block level element.</div>
+        <span>This is a span element and it is inline.</span>
+        <a href="">Inline Inline Inline</a>
+      </section>
+    </section>
+  </body>
+</html>
