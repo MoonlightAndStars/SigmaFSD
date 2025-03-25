@@ -77,7 +77,7 @@
             point to audio files that are:
             <ul>
               <li>hosted on the same server as our website.</li>
-              <li>accessible via a direct URL to a audio file.</li>
+              <li>accessible via a direct URL to an audio file.</li>
             </ul>
           </li>
           <li>
@@ -89,22 +89,21 @@
             we don't use it normally.
           </li>
           <li>loop = it keeps playing the audio after it finishes.</li>
-          <li>poster = we can use posters as thumbnail of our video.</li>
+          <li>poster = we can use posters as a thumbnail of our video.</li>
           <li>
-            preload = specifies how a audio file should be loaded when the page
-            loads.('auto', 'metadata', 'none')
+            preload = specifies how an audio file should be loaded when the page
+            loads. ('auto', 'metadata', 'none')
           </li>
-          <li>The 'preload' attribute can have the following values :</li>
           <li>
-            we use preload attribute when we want our browser to fetch data
-            before.
+            The 'preload' attribute can have the following values:
+            <ul>
+              <li>none - default value.</li>
+              <li>metadata - only preloads metadata of the audio.</li>
+              <li>auto - automatically gets downloaded.</li>
+            </ul>
           </li>
-          <ul>
-            <li>none - default value.</li>
-            <li>metadata - only preloads metadata of the audio.</li>
-            <li>auto - automatically gets downloaded.</li>
-          </ul>
         </ol>
+
         <p>The example of audio tag.</p>
         <audio src="audio.mp3" controls autoplay loop muted></audio>
         <section class="example-text">
@@ -205,8 +204,20 @@
       <!-- youtube-share section starts -->
       <section class="youtube-share">
         <h2>Embedding Video From YouTube</h2>
-        <p>embedding youtube video here, to embed a youtube video all we need to use is iframe and video link" ></p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/XZwBNDGuWGU?si=dbzCAIna78Akt-ns" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p>
+          embedding youtube video here, to embed a youtube video all we need to
+          use is iframe and video link" >
+        </p>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/XZwBNDGuWGU?si=dbzCAIna78Akt-ns"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
       </section>
       <!-- youtube-share section ends -->
     </section>
