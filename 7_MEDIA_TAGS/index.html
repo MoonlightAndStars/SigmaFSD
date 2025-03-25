@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MEDIA - AUDIO and VIDEO</title>
+  </head>
+  <body>
+    <!-- main section starts -->
+    <section class="main">
+      <h1>MEDIA- AUDIO and VIDEO</h1>
+      <!-- video section starts -->
+      <section class="video">
+        <h2>Video Tag</h2>
+        <p>We use %lt;video&gt; tag to add the video in our website.</p>
+        <p>Attributes of a video tag.</p>
+        <ol>
+          <li>
+            src = src attribute of the HTML video tag is primarily designed to
+            point to video files that are:
+            <ul>
+              <li>hosted on the same server as our website.</li>
+              <li>
+                accessible via a direct URL to a video file (e.g., a .mp4,
+                .webm, or .ogg file).
+              </li>
+              <li>
+                therefore, we generally use the src attribute to link to video
+                files that we have uploaded and stored yourself.
+              </li>
+            </ul>
+          </li>
+          <li>
+            controls = to add controls on the video. if controls not added, the
+            video will not be playable. after adding controls, we can make play
+            the video, pause the video, mute the video or even make video
+            full-screen, download it, mute it, change the playback speed or even
+            play the video as picture in picture.
+          </li>
+          <li>
+            height and width = we give height and width in pixels to adjust the
+            height and width of the video.
+          </li>
+          <li>
+            autoplay = automatically plays the video as soon as the page loads.
+            we don't use it normally.
+          </li>
+          <li>loop = it keeps playing the video after it finishes.</li>
+          <li>poster = we can use posters as thumbnail of our video.</li>
+          <li>muted = the video will remain muted in start.</li>
+        </ol>
+        <p>The example of video tag.</p>
+        <video
+          src="source.mp4"
+          controls
+          autoplay
+          loop
+          height="255"
+          width="225"
+          poster="poster.jpg"
+          alt="Poster Image"
+        ></video>
+        <section class="example-text">
+          &lt;video src="source.mp4" controls autoplay loop height="255"
+          width="225" poster="poster.jpg" alt="Poster Image" &gt;
+        </section>
+      </section>
+      <!-- video section ends -->
+      <!-- audio section starts -->
+      <section class="audio">
+        <h2>Audio Tag</h2>
+        <p>We use &lt;audio&gt; tag to add the audio in our website.</p>
+        <p>Attributes of a audio tag.</p>
+        <ol>
+          <li>
+            src = src attribute of the HTML audio tag is primarily designed to
+            point to audio files that are:
+            <ul>
+              <li>hosted on the same server as our website.</li>
+              <li>accessible via a direct URL to a audio file.</li>
+            </ul>
+          </li>
+          <li>
+            controls = to add controls on the audio. if controls not added, the
+            audio will not even be displayed let alone be playable.
+          </li>
+          <li>
+            autoplay = automatically plays the audio as soon as the page loads.
+            we don't use it normally.
+          </li>
+          <li>loop = it keeps playing the audio after it finishes.</li>
+          <li>poster = we can use posters as thumbnail of our video.</li>
+          <li>
+            preload = specifies how a audio file should be loaded when the page
+            loads.('auto', 'metadata', 'none')
+          </li>
+          <li>The 'preload' attribute can have the following values :</li>
+          <li>
+            we use preload attribute when we want our browser to fetch data
+            before.
+          </li>
+          <ul>
+            <li>none - default value.</li>
+            <li>metadata - only preloads metadata of the audio.</li>
+            <li>auto - automatically gets downloaded.</li>
+          </ul>
+        </ol>
+        <p>The example of audio tag.</p>
+        <audio src="audio.mp3" controls autoplay loop muted></audio>
+        <section class="example-text">
+          &lt;audio src="audio.mp3" controls autoplay loop muted &gt;
+        </section>
+      </section>
+      <!-- audio section ends -->
+      <!-- svg section starts -->
+      <section class="svg">
+        <h2>SVG Files</h2>
+        <p>SVG stands for Scalable Vector Graphics.</p>
+        <p>
+          SVG files are used to create vector graphics (2D images) that can be
+          resized, scaled, and recolored without losing quality.
+        </p>
+        <p>
+          SVG files can be created with a text editor or with SVG editors like
+          Adobe Illustrator.
+        </p>
+        <p>The example of svg file.</p>
+        <svg height="100" width="100" xmlns="http://www.w3.org/2000/svg">
+          <circle
+            r="45"
+            cx="50"
+            cy="50"
+            fill="red"
+            stroke="cyan"
+            stroke-width="3"
+          />
+        </svg>
+        <section class="example-text">
+          &lt;svg height="100" width="100"
+          xmlns="http://www.w3.org/2000/svg"&gt; &lt;circle r="45" cx="50"
+          cy="50" fill="red" stroke="cyan" stroke-width="3"/ &gt; &lt;svg&gt;
+        </section>
+        <p>
+          to show svg in img attribute we need to add a flag xmlns to the svg
+          file.
+        </p>
+      </section>
+      <!-- svg section ends -->
+      <!-- img section starts -->
+      <section class="img">
+        <h2>IMG TAG</h2>
+        <p>We use image tag to embed images on the website.</p>
+        <p>
+          we can embed svg images through img tag by providing the img location
+          of the svg file in the src attribute.
+        </p>
+        <p>Example of img tag.</p>
+        <img src="image.svg" alt="image-svg" width="45" />
+        <section class="example-text">
+          &lt;img src="image.svg" alt="image-svg" width="45"/&gt;
+        </section>
+      </section>
+      <!-- img section ends -->
+      <!-- iframe section starts -->
+      <section class="i-frame">
+        <h2>i-frames in HTML (Embedding other websites on our webpage)</h2>
+        <ol>
+          <li>
+            It is a good practice to always include a title attribute for the
+            &lt;iframe&gt;. This is used by screen readers to read out what the
+            content of the iframe is.
+          </li>
+          <li>
+            Use the height and width attributes to specify the size of the
+            iframe. By default it is in pixels.
+          </li>
+          <li>
+            &lt;iframe src="demo_iframe.htm" height="200" width="300"
+            title="Iframe Example"&gt;&lt;/iframe&gt;
+          </li>
+          <li>
+            &lt;iframe src="demo_iframe.htm" style="height:200px;width:300px;"
+            title="Iframe Example"&gt;&lt;/iframe&gt;
+          </li>
+          <li>
+            An iframe can be used as the target frame for a link. The target
+            attribute of the link must refer to the name attribute of the iframe
+          </li>
+          <li>
+            &lt;iframe src="demo_iframe.htm" name="iframe_a" title="Iframe
+            Example"&gt;&lt;/iframe&gt; &lt;p&gt;&lt;a
+            href="https://www.wikipedia.com"
+            target="iframe_a"&gt;&lt;/a&gt;&lt;/p&gt;
+          </li>
+        </ol>
+        <iframe
+          src="https://www.wikipedia.com"
+          frameborder="0"
+          title="description"
+          height="400"
+          width="600"
+        ></iframe>
+      </section>
+      <!-- iframe section ends -->
+      <!-- youtube-share section starts -->
+      <section class="youtube-share">
+        <h2>Embedding Video From YouTube</h2>
+        <p>embedding youtube video here, to embed a youtube video all we need to use is iframe and video link" ></p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/XZwBNDGuWGU?si=dbzCAIna78Akt-ns" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </section>
+      <!-- youtube-share section ends -->
+    </section>
+    <!-- main section ends -->
+  </body>
+</html>
