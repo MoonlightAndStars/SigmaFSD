@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This page is about CSS selectors and their importance.">
+    <title>CSS Selectors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>CSS Selectors</h1>
+        <p>We use selectors to target specific HTML elements using CSS.</p>
+
+        <section class="types">
+            <h2>Types of CSS Selectors</h2>
+            <ol>
+                <li><strong>Universal Selector:</strong>  
+                    <p>It selects all elements using <code>*</code>. Example:</p>
+                    <pre>* { margin: 0; padding: 0; box-sizing: border-box; }</pre>
+                </li>
+
+                <li><strong>Element Selector:</strong>  
+                    <p>Targets an HTML element directly (e.g., <code>p {}</code>, <code>h1 {}</code>).</p>
+                </li>
+
+                <li><strong>Class Selector:</strong>  
+                    <p>Targets elements with a specific class. Example:</p>
+                    <pre>.btn { background-color: blue; }</pre>
+                </li>
+
+                <li><strong>ID Selector:</strong>  
+                    <p>Targets a specific element using <code>#id</code>. Example:</p>
+                    <pre>#header { font-size: 24px; }</pre>
+                </li>
+
+                <li><strong>Group Selector:</strong>  
+                    <p>Applies same styles to multiple elements. Example:</p>
+                    <pre>h1, h2, p { color: black; }</pre>
+                </li>
+
+                <li><strong>Child Selector (>):</strong>  
+                    <p>Targets direct children only. Example:</p>
+                    <pre>div > p { color: red; }</pre>
+                </li>
+
+                <li><strong>Descendant Selector (space):</strong>  
+                    <p>Targets all nested elements. Example:</p>
+                    <pre>div p { font-size: 14px; }</pre>
+                </li>
+
+                <li><strong>Adjacent Sibling Selector (+):</strong>  
+                    <p>Selects next immediate sibling. Example:</p>
+                    <pre>h1 + p { color: gray; }</pre>
+                </li>
+
+                <li><strong>General Sibling Selector (~):</strong>  
+                    <p>Selects all siblings. Example:</p>
+                    <pre>h1 ~ p { color: blue; }</pre>
+                </li>
+
+                <li><strong>Attribute Selector:</strong>  
+                    <p>Targets elements with a specific attribute. Example:</p>
+                    <pre>input[type="text"] { border: 1px solid black; }</pre>
+                </li>
+
+                <li><strong>Pseudo-class Selector:</strong>  
+                    <p>Applies styles on a specific state. Example:</p>
+                    <pre>a:hover { color: red; }</pre>
+                </li>
+
+                <li><strong>Pseudo-element Selector:</strong>  
+                    <p>Targets parts of an element. Example:</p>
+                    <pre>p::first-letter { font-size: 20px; }</pre>
+                </li>
+            </ol>
+        </section>
+    </main>
+</body>
+</html>

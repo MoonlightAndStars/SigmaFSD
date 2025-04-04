@@ -1,0 +1,17 @@
+we use selectors to target specific html elements and design them using css
+
+types of selectors :- there are different types of selectors and these selectors have their own specificity. a selector with more specificity overwrites any other selector with lesser specificity.
+
+specificity is decided based on the specific nature of the selector. for example, there can be many paragraphs or divs but paragraphs or divs with a particular class will be less, and then we have IDs that are unique. so and ID selector is more specific compared to the other two. the class selector is less specific compared to the ID selector but is more specific compared to the element selector.
+
+An element selector is more specific compared to the universal selector.
+
+Apart from these selectors we have child selector, descendant selector, pseudo selector.
+
+child selector - if any element is direct child to another html then this selector is applied. elem1 > elem2 { } this means that elem2 is direct child to elem1 only and only then this style will be applied.
+
+descendant selector - if the element is not a direct child then to target such element we can use a descendant selector.
+
+pseudo selector - if any html element has some specific property or attribute value, then using pseudo selectors we can target those elements and design them accordingly. eg a:visited, a:link, a:active, a:hover, p:first-child etc.
+
+--first-child - wherever p is the first child of its parent, apply the styling.
