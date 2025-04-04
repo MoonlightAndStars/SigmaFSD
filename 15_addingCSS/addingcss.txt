@@ -1,0 +1,4 @@
+we can add css in any html page by three ways-
+1 - inline css - not recommended, cannot be overwritten.
+2 - internal css - can be used in smaller projects but still external css file is preferred.
+3 - external css

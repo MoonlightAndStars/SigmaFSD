@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This page is about adding CSS To the HTML in three ways">
+    <title>Inline, Internal and External CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <section class="ways">
+            <h1>CSS can be added in three ways.</h1>
+            <ol>
+                <li>Inline</li>
+                <li>Internal</li>
+                <li>External</li>
+            </ol>
+            <section class="inline">
+                <h2>Inline CSS</h2>
+                <p>In inline CSS, we can directly add the style attribute to the tag and give the styling whatever we wish</p>
+                <p>However, this is not considered a good practice to style elements using inline css.</p>
+                <p>If we have 1000 lines to style then we will have to give 1000 style values in each line to style them. </p>
+                <p>They can not be re written by internal or external styles.</p>
+                <p class="example" style="color: yellow; background-color: red;">Example of Inline Style : &lt;h1 style="color: yellow; background-color : red"&gt; This is a text of yellow color with red background styled using inline css.&lt;h1&gt; </p>
+            </section>
+            <section class="internal">
+                <h2>Internal CSS</h2>
+                <p>We use internal css when our project is small.</p>
+                <p>In internal css, a style tag is created in the head section of the html and all the styling is written there.</p>
+                <p>Internal CSS is better than inline CSS and we can bulk edit our style.</p>
+                <p>The drawback of internal css is that once we have a huge number of code and we have to style the webpage then because of styling our webpage our file will keep on growing and this will create problem.</p>
+                <p class="example">In the head section we create &lt;style&gt; &lt;/style&gt; and write out styling between this style tag.</p>
+            </section>
+            <section class="external">
+                <h2>External CSS</h2>
+                <p>A separate CSS file is created by the name of style.css and in the head section we link the css by link tag using href to the stylesheet.</p>
+            </section>
+        </section>
+    </main>
+</body>
+</html>
